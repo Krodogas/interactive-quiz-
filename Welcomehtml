@@ -1,0 +1,41 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome User</title>
+<style>
+    input{
+    padding: 10px;
+}
+button{
+    padding: 10px;
+    background: orange;
+}
+body{
+    background-color: solid orange;
+}
+</style>
+</head>
+<body>
+<h1>Hello welcome</h1>
+<div class="container">
+  <label for="username">Enter your name:</label>
+  <input type="text" id="username" placeholder="Your name">
+  <button onclick="displayWelcome()">Submit</button>
+</div>
+<div id="welcomeMessage"></div>
+<script>
+    function displayWelcome() {
+  var username = document.getElementById("username").value;
+  var welcomeMessage = document.getElementById("welcomeMessage");
+  
+  if(username.trim() !== "") {
+    welcomeMessage.innerHTML = "Welcome Mr/Ms. " + username + "";
+  } else {
+    welcomeMessage.innerHTML = "Please enter your name!";
+  }
+}
+</script>
+</body>
+</html>
